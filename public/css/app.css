@@ -1,0 +1,433 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Arial';
+}
+
+:root{
+  --a-color: #111111;
+  --b-color: #1e1e1e;
+  --c-color: #01FE87;
+  --d-color: #FAFAFA;
+  --e-color: #777777;
+  --f-color: #333333;
+  --g-color: #222222;
+  --shadow-color: rgba(51, 51,51, .16);
+  --h-color: red;
+  --i-color: green;
+}
+
+header,
+section.home_pg {
+    padding: 0px 60px;
+  }
+
+
+header {
+  width: 100vw;
+  height: 100px;
+  border-bottom: 1px solid var(--f-color);
+  background-color: var(--a-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div.head_left img{
+  width: 110px;
+  cursor: pointer;
+}
+
+button{
+  border: 1px solid var(--c-color);
+  border-radius: 5px;
+  padding: 7.5px 15px;
+  background: transparent;
+  color: var(--c-color);
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover{
+  background-color: var(--c-color);
+  color: var(--a-color);
+  opacity: 1;
+}
+
+button.btn_login{
+  background: var(--c-color);
+  color: var(--a-color);
+  opacity: .75;
+}
+
+button.btn_login:hover{
+  background: var(--c-color);
+  color: var(--a-color);
+  opacity: 1;
+}
+
+h1.title{
+  color: var(--d-color);
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+h1.title > span{
+  color: var(--c-color);
+}
+
+h1.title,
+p.subtitle{
+ text-align: center;
+}
+
+p.subtitle{
+  color: var(--e-color);
+  font-size: 18px;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+section.home_pg, section.form_pg{
+  background: linear-gradient(to bottom, var(--a-color), var(--b-color));
+  width: 100vw;
+  height: calc(100vh - 100px);
+}
+
+section.home_pg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* section.home_pg{
+  display: none;
+} */
+
+section.form_pg{
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+section.form_pg h1.title,
+section.form_pg p.subtitle{
+  text-align: center;
+}
+
+section.form_pg div.form_righ{
+  width: 40%;
+  background: var(--b-color);
+  border: 1px solid var(--f-color);
+  border-radius: 4px;
+  padding: 20px;
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 25%;
+}
+
+section.form_pg div.form_righ form{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+div.form_righ form input{
+  background: var(--g-color);
+  border: 1px solid var(--f-color);
+  border-radius: 4px;
+  color: var(--e-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+div.form_righ form input:focus{
+  outline: none;
+  background: var(--f-color);
+}
+
+div.form_righ form input.field_error{
+    border: 1px solid var(--h-color);
+}
+
+p.field_error{
+   color: var(--h-color);
+   font-size: 14px;
+   text-align: left;
+   margin-bottom: 7.5px;
+
+}
+
+div.form_righ form span{
+  color: var(--e-color);
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+div.form_righ form span a{
+  text-decoration: none;
+  color: var(--c-color);
+}
+
+
+div.form_righ form span a:hover{
+  text-decoration: underline;
+}
+
+button.btn_fullwidt{
+  width: 100%;
+}
+
+
+@media (min-width: 900px) {
+  header {
+    padding: 0px 60px;
+  }
+
+  h1.title{
+    font-size: 40px;
+  }
+
+  p.subtitle{
+        font-size: 20px;
+  }
+
+  br{
+    display: block;
+  }
+
+  section.form_pg{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  section.form_pg div.form_righ{
+  width: 100%;
+  background: var(--b-color);
+  border: 1px solid var(--f-color);
+  border-radius: 4px;
+  padding: 20px;
+  padding-top: 50px;
+  margin: 0 auto;
+  max-width: 25%;
+}
+}
+
+@media (min-width: 1200px) {
+  header,
+  section.home_pg {
+    padding: 0px 120px;
+  }
+
+  h1.title{
+    font-size: 44px;
+}
+
+    p.subtitle{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 599px) {
+  /* Diminui o padding horizontal geral para telas muito pequenas */
+  header,
+  section.home_pg {
+    padding: 0px 20px; /* Reduz de 60px para 20px */
+  }
+
+  /* Reduz o tamanho da logo */
+  header div.head_left img {
+    width: 90px;
+  }
+
+  /* Diminui o tamanho da fonte dos títulos e subtítulos */
+  h1.title {
+    font-size: 28px; /* Reduz de 32px */
+    margin-bottom: 20px;
+  }
+
+  p.subtitle {
+    font-size: 16px; /* Reduz de 18px */
+    margin-bottom: 30px;
+  }
+
+  /* Remove a quebra de linha <br> que é exibida em telas maiores */
+  br {
+    display: none;
+  }
+
+  /* Garante que o botão use um tamanho de fonte menor */
+  button {
+    font-size: 16px;
+    padding: 7px 14px;
+  }
+
+  /* Seções de altura total devem ser mais flexíveis em telas móveis */
+  section.home_pg,
+  section.form_pg {
+    height: auto; /* Permite que o conteúdo defina a altura */
+    min-height: calc(100vh - 100px); /* Garante uma altura mínima */
+    padding-top: 30px; /* Reduz o padding superior */
+    padding-bottom: 30px; /* Adiciona padding inferior para evitar corte */
+  }
+
+  /* Ajusta a largura do container do formulário */
+  section.form_pg div.form_righ {
+    width: 100%; /* Ocupa a largura total na tela móvel */
+    max-width: 90%; /* Define uma largura máxima percentual */
+    padding: 20px 15px; /* Ajusta o padding interno do formulário */
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  /*
+    Regras para 900px e acima (inclui 1200px+)
+    Você já tinha essas regras, vamos mantê-las consistentes.
+  */
+
+  /* Mantém o padding de 60px que você já definiu */
+  header,
+  section.home_pg {
+    padding: 0px 60px;
+  }
+
+  /* Aumenta o tamanho da fonte do título principal para um impacto maior */
+  h1.title {
+    font-size: 40px;
+  }
+
+  /* Aumenta a fonte do subtítulo */
+  p.subtitle {
+    font-size: 20px;
+  }
+
+  /* Garante que a tag <br> seja exibida nessas telas */
+  br {
+    display: block;
+  }
+
+  /* Centraliza a seção do formulário e controla sua largura */
+  section.form_pg {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Define o container do formulário para ter no máximo 25% da largura da tela */
+  section.form_pg div.form_righ {
+    width: 100%;
+    max-width: 350px; /* Use um valor fixo em px para controle melhor, ou mantemos 25% */
+    /* Mantendo o seu 25% para compatibilidade, mas 350px a 400px é mais comum para formulários */
+    max-width: 25%;
+    /* Outros estilos permanecem os mesmos */
+    background: var(--b-color);
+    border: 1px solid var(--f-color);
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*
+    Regras para 1200px e acima (Desktops Grandes)
+    Aumentamos o padding e a tipografia para telas mais largas.
+  */
+
+  /* Aumenta o padding horizontal de 60px para 120px */
+  header,
+  section.home_pg {
+    padding: 0px 120px;
+  }
+
+  /* Aumenta um pouco mais o título principal */
+  h1.title {
+    font-size: 44px;
+  }
+
+  /* Aumenta o subtítulo */
+  p.subtitle {
+    font-size: 22px;
+  }
+}
+
+
+@media (min-width: 900px) {
+  /*
+    Regras para 900px e acima (inclui 1200px+)
+    Você já tinha essas regras, vamos mantê-las consistentes.
+  */
+
+  /* Mantém o padding de 60px que você já definiu */
+  header,
+  section.home_pg {
+    padding: 0px 60px;
+  }
+
+  /* Aumenta o tamanho da fonte do título principal para um impacto maior */
+  h1.title {
+    font-size: 40px;
+  }
+
+  /* Aumenta a fonte do subtítulo */
+  p.subtitle {
+    font-size: 20px;
+  }
+
+  /* Garante que a tag <br> seja exibida nessas telas */
+  br {
+    display: block;
+  }
+
+  /* Centraliza a seção do formulário e controla sua largura */
+  section.form_pg {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Define o container do formulário para ter no máximo 25% da largura da tela */
+  section.form_pg div.form_righ {
+    width: 100%;
+    max-width: 350px; /* Use um valor fixo em px para controle melhor, ou mantemos 25% */
+    /* Mantendo o seu 25% para compatibilidade, mas 350px a 400px é mais comum para formulários */
+    max-width: 25%;
+    /* Outros estilos permanecem os mesmos */
+    background: var(--b-color);
+    border: 1px solid var(--f-color);
+    border-radius: 4px;
+    padding: 20px;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*
+    Regras para 1200px e acima (Desktops Grandes)
+    Aumentamos o padding e a tipografia para telas mais largas.
+  */
+
+  /* Aumenta o padding horizontal de 60px para 120px */
+  header,
+  section.home_pg {
+    padding: 0px 120px;
+  }
+
+  /* Aumenta um pouco mais o título principal */
+  h1.title {
+    font-size: 44px;
+  }
+
+  /* Aumenta o subtítulo */
+  p.subtitle {
+    font-size: 22px;
+  }
+}
