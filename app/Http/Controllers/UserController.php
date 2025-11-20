@@ -47,11 +47,21 @@ class UserController extends Controller
         try{
 
             if($user->where('email', $validated['email'])->exists()){
-                return 'Usuário já cadastrado!';
+                return back()->withInput()->withErrors([
+                    'email'=> 'Esse email já foi cadastrado!'
+                ]);
             }else{
                 $user = $user->fill($validated);
                 $user->password = Hash::make($validated['password']);
                 $user->save();
+
+                // return back()->with(
+                //     'status', 'Sua conta foi criada com sucesso!'
+                // );
+
+                return redirect()->route('login')->with(
+                    'status', 'Sua conta foi criada com sucesso!'
+                );
 
             }
         }catch(\Exception $ex){

@@ -183,6 +183,37 @@ button.btn_fullwidt{
 }
 
 
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px; /* Cantos levemente arredondados */
+    font-weight: bold;
+}
+
+
+.alert-success {
+    color: #3c763d; /* Texto Verde Escuro */
+    background-color: #dff0d8; /* Fundo Verde Claro */
+    border-color: #d6e9c6; /* Borda Verde */
+}
+
+
+.alert-danger {
+    color: #a94442; /* Texto Vermelho Escuro */
+    background-color: #f2dede; /* Fundo Vermelho Claro */
+    border-color: #ebccd1; /* Borda Vermelha */
+}
+
+
+.text-danger {
+    color: #a94442;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
+
+
 @media (min-width: 900px) {
   header {
     padding: 0px 60px;
