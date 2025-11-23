@@ -15,7 +15,7 @@
                     if (successAlert) {
                         successAlert.style.display = 'none';
                     }
-                }, 10000);
+                }, 5000);
             </script>
         @endif
 
