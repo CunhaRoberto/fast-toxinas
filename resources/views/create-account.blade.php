@@ -11,7 +11,7 @@
                 @error('name')
                 <p class="field_error">{{ $message }}</p>
                 @enderror
-                <input type="text" name="name" placeholder="Seu nome" value="{{old('name')}}" class="@error('name') field_error @enderror" />
+                <input type="text" name="name" placeholder="Seu nome" autocomplete="off"  value="{{old('name')}}" class="@error('name') field_error @enderror" />
 
                 @error('email')
                <p class="field_error">{{ $message }}</p>
@@ -21,7 +21,7 @@
                 @error('password')
                     <p class="field_error">{{ $message }}</p>
                 @enderror
-                <input type="password" name="password" placeholder="Sua senha" value="{{ old('password') }}" class="@error('password') field_error @enderror"/>
+                <input type="password" name="password" placeholder="Sua senha" autocomplete="off"  value="{{ old('password') }}" class="@error('password') field_error @enderror"/>
 
                 <span>Já tem uma conta? <a href="{{ route('login') }}">Entrar</a></span>
 
