@@ -4,7 +4,13 @@
     </div>
 
     <div class="head_right">
-        <x-button class='' linkto='create-account' >Criar conta</x-button>
-        <x-button class='btn_login' linkto='login'>Login</x-button>
+        @auth
+            <x-button class='btn_login' linkto='logout'>Sair</x-button>
+        @endauth
+
+        @guest
+            <x-button class='' linkto='create-account' >Criar conta</x-button>
+            <x-button class='btn_login' linkto='login'>Login</x-button>
+        @endguest
     </div>
 </header>
