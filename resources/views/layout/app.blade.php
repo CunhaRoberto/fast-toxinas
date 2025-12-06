@@ -6,7 +6,10 @@
     <title>FAST TOXINAS</title>
 
     <!-- Styles CSS -->
+     <link rel="stylesheet" href="{{ asset('css/card.css') }}">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="..." crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     @include('components.header')

@@ -1,0 +1,28 @@
+/* 1. Ajuste Básico para o Card */
+.card {
+    /* Garante que o Card preencha toda a altura da coluna (se necessário) */
+    height: 100%;
+    /* Adiciona um espaçamento interno para afastar o conteúdo das bordas do próprio card */
+    /* Se a sobreposição estiver ocorrendo dentro do .card, isso pode ajudar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    /* Remova qualquer margin ou padding que possa estar causando a sobreposição se não for o Bootstrap */
+}
+
+/* 2. Solução para Sobreposição (Mais Comum) */
+/* A sobreposição geralmente ocorre se o header/body não tiverem padding ou se o conteúdo interno estiver com margin negativa. */
+.card-body {
+    /* Adiciona padding suficiente para que o conteúdo não 'suba' demais */
+    padding: 1rem; /* Padrão do Bootstrap */
+
+    /* Usa Flexbox para garantir que o corpo do card se ajuste bem */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Garante que a imagem se ajuste ao topo */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+}
